@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pizza Planet</title>
     <link rel="stylesheet" href="{{ asset('css/loading.css') }}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     @vite('resources/css/app.css')
 </head>
 
@@ -17,6 +19,7 @@
     <main class="px-4 py-5">
         {{ $slot }}
     </main>
+    <x-common.toast />
 </body>
 
 </html>
