@@ -5,9 +5,9 @@
         <div class="flex justify-center items-center gap-2 self-start">
             <x-form.text-input wire:model.live='search' />
             <x-common.loading wire:loading />
-            <x-admin.add-flavor-modal />
+            <livewire:admin.flavor.add-flavor-modal />
         </div>
-        <ul class="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+        <ul class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             @forelse ($flavors as $flavor)
                 <li class="card w-96 grow-0 bg-base-100 shadow-xl">
                     <figure>
