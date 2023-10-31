@@ -12,6 +12,13 @@ class AddFlavorModal extends Component
 
     public FlavorForm $form;
 
+    public function mount(flavor $flavor)
+    {
+        if (isset($flavor)) {
+            $this->form->fillForm($flavor);
+        }
+    }
+
     public function resetForm()
     {
         $this->form->name = "";

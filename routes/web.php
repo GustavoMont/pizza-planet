@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Admin\Flavor\EditFlavor;
 use App\Livewire\Menu;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/cardapio');
 
 Route::get('/cardapio', Menu::class);
+Route::get('/sabores/{flavor}/editar', EditFlavor::class);

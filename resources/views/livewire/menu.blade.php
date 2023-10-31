@@ -9,7 +9,8 @@
         </div>
         <ul class="flex flex-col gap-5 md:grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             @forelse ($flavors as $flavor)
-                <li class="card w-96 grow-0 bg-base-100 shadow-xl">
+                <livewire:flavor-card :$flavor :key="$flavor->id" />
+                {{-- <li class="card w-96 grow-0 bg-base-100 shadow-xl">
                     <figure>
                         <img src="{{ asset('images/pizza_' . $loop->index % 3 + 1 . '.jpg') }}" alt="Shoes" />
                     </figure>
@@ -21,7 +22,7 @@
                         </h2>
                         <p>{{ $flavor->ingredients }} </p>
                     </div>
-                </li>
+                </li> --}}
             @empty
                 <p>Nenhum sabor encontrado</p>
             @endforelse
